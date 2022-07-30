@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/newsDialogImage"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_app_foreground_background" />
+
+    <TextView
+        android:id="@+id/newsDialogText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_with_border"
+        android:padding="6dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/newsDialogImage"
+        app:layout_constraintStart_toStartOf="@+id/newsDialogImage"
+        app:layout_constraintTop_toBottomOf="@+id/newsDialogImage" />
+
+    <ImageButton
+        android:id="@+id/dialogTwitterButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_with_border"
+        android:onClick="onTwitterButtonClick"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/newsDialogImage"
+        app:layout_constraintTop_toBottomOf="@+id/newsDialogText"
+        app:srcCompat="@drawable/ic_twitter_logo_dialog" />
+
+    <ImageButton
+        android:id="@+id/dialogChromeButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_with_border"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/newsDialogImage"
+        app:layout_constraintTop_toBottomOf="@+id/newsDialogText"
+        app:srcCompat="@drawable/ic_chrome" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

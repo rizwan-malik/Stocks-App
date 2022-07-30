@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="0dp">
+
+    <TextView
+        android:id="@+id/portfolioTicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NFLX"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/portfolioName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NetFlix Inc."
+        android:textColor="@color/textGray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/portfolioTicker"
+        app:layout_constraintTop_toBottomOf="@+id/portfolioTicker" />
+
+    <TextView
+        android:id="@+id/portfolioCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="475.74"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/forwardArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/portfolioChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="28.47"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/forwardArrow"
+        app:layout_constraintTop_toBottomOf="@+id/portfolioCurrent" />
+
+    <ImageView
+        android:id="@+id/upDownArrow"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/portfolioChange"
+        app:layout_constraintEnd_toStartOf="@+id/portfolioChange"
+        app:layout_constraintTop_toTopOf="@+id/portfolioChange"
+        app:srcCompat="@drawable/ic_baseline_trending_down_24" />
+
+    <ImageView
+        android:id="@+id/forwardArrow"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:contentDescription="TODO"
+        android:paddingLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

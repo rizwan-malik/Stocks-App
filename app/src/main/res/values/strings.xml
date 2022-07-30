@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Stocks</string>
+    <string name="portfolio">PORTFOLIO</string>
+    <string name="favourite">FAVORITES</string>
+    <string name="footer">Powered by tiingo</string>
+
+</resources>
