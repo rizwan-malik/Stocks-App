@@ -23,10 +23,25 @@ On clicking the **Goto** button on any stock listing or searching for a stock sy
 
 The top action bar should has the ‘Stock’ title and the back button to go back to the home screen (which has the filter values that were used for the current search if triggered by using the search functionality). The action bar also contains a favorite icon to add or remove the stock from favorites. The favorite icon will either be filled or bordered based on whether the stock is favorited or not. Adding/Removing the stock from favorites also displays a toast message as shown in the [video](#video).
 
-Below the action bar, there should be 4 fields: stocks symbol, current price with ‘$’ sign, company name and the change price with ‘$’ sign (the text color should be green, red or grey based on the change price value being positive, negative or zero respectively). The App then has a WebView element which is blank till the chart loads. (More details later in this section)
+Below the action bar, there are 4 fields: stocks symbol, **current price** with ‘$’ sign, **company name** and the **change price** with ‘$’ sign (the text color is green, red or grey based on the change price value being positive, negative or zero respectively). The App then has a WebView element which is blank till the chart loads.
 
 [https://user-images.githubusercontent.com/70775208/182134838-d3ed17c2-e953-4c21-8a9b-1a55e3910b69.mp4](#video)
 
+The **Portfolio section** allows the user to trade the shares of the stock. It contains a left section which shows the market value of the stock in the user portfolio and the number of shares the user owns. The right section contains the trade button. Initially, when the user starts the app for the first time, they will not have any stocks/shares in the portfolio and an initial pre-loaded amount of $20,000 to trade on the app. This amount can change based on the trading done by the user. (For example, if the user sells shares at a loss, it can become less than 20,000 and so forth)
 
-https://user-images.githubusercontent.com/70775208/182139254-1d65ddbd-97e1-4162-a19c-2131ae6d4d76.mp4
+The **Stats section** displays the trading statistics for the given stock in a grid. The grid has 7 fields namely: *Current price, Low, Bid price, Open price, Mid, High and Volume*. The **GridView element** is used for this section.
+
+The **About section** displays the description of the company. If the description is longer than 2 lines, it ellipsizes the end of the 2nd line and displays a ‘Show more…’ button. On clicking this button, the complete description becomes visible and the button text changes to ‘Show less’.
+
+The **News section** displays the news articles related to the given stock symbol. The first article has a different format/layout than the rest of the articles in the list. On clicking the news article, the original article is opened in chrome using the article URL. On long press, a dialog box opens with options to share on twitter and open in chrome. For each article, the information displayed is *Article source, Article title, Article image* and the *time ago* when the article was published. The news section uses **RecyclerView** and **ArticleDialog elements**.
+
+The Trade button in the **Portfolio section** opens a new dialog box for trading. The dialog shows an input box which only accepts numeric input. Below the input field, there is a calculation text box which updates based on the numeric input to display the final price of the trade. The trade dialog also displays the current available amount to trade for the user. The user can either buy or sell the shares. Based on the trade, the amount available to trade will be updated accordingly. There are 5 error conditions that are checked before executing the trade and displaying the trade successful dialog. The error conditions are:
+1. **Users try to sell more shares than they own** - The trade dialog box should remain open and a toast message with text ‘Not enough shares to sell’ should be displayed.
+2. **User tries to buy more shares than money available** - The trade dialog box should remain open and a toast message with text ‘Not enough money to buy’ should be displayed.
+3. **User tries to sell zero or negative shares** - The trade dialog box should remain open and a toast message with text ‘Cannot sell less than 0 shares’ should be displayed.
+4. **User tries to buy zero or negative shares** - The trade dialog box should remain open and a toast message with text ‘Cannot buy less than 0 shares’ should be displayed.
+5. **User enters invalid input like text or punctuations** - The trade dialog box should remain open and a toast message with text ‘Please enter valid amount’ should be displayed.
+
+## HighCharts in Android
+The Chart section in the detailed stock information screen uses a **WebView element** to load the HighCharts stock chart. To load the chart, the App loads a local HTML file with the necessary JavaScript to request the data from the NodeJS server and displays the chart when the data is fetched.
 
