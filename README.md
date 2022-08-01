@@ -1,6 +1,8 @@
 # Stocks-App
 Android app which allows users to search for different stock symbols/tickers and look at the detailed information about them. Additionally, the users can trade with virtual money and create a portfolio. Users can also favorite stock symbols to track their stock prices. 
 
+video(#video)
+
 The App contains 2 screens: Home screen and the Detailed Stock Information screen. However, the App has multiple features on each of these screens.
 
 There are 4 calls to the **tiingo** APIs for *company description, stock prices, autocomplete* and *chart data points*, and the additional *newsapi* endpoint.
@@ -25,8 +27,6 @@ The top action bar should has the ‘Stock’ title and the back button to go ba
 
 Below the action bar, there are 4 fields: stocks symbol, **current price** with ‘$’ sign, **company name** and the **change price** with ‘$’ sign (the text color is green, red or grey based on the change price value being positive, negative or zero respectively). The App then has a WebView element which is blank till the chart loads.
 
-[https://user-images.githubusercontent.com/70775208/182134838-d3ed17c2-e953-4c21-8a9b-1a55e3910b69.mp4](#video)
-
 The **Portfolio section** allows the user to trade the shares of the stock. It contains a left section which shows the market value of the stock in the user portfolio and the number of shares the user owns. The right section contains the trade button. Initially, when the user starts the app for the first time, they will not have any stocks/shares in the portfolio and an initial pre-loaded amount of $20,000 to trade on the app. This amount can change based on the trading done by the user. (For example, if the user sells shares at a loss, it can become less than 20,000 and so forth)
 
 The **Stats section** displays the trading statistics for the given stock in a grid. The grid has 7 fields namely: *Current price, Low, Bid price, Open price, Mid, High and Volume*. The **GridView element** is used for this section.
@@ -44,4 +44,6 @@ The Trade button in the **Portfolio section** opens a new dialog box for trading
 
 ## HighCharts in Android
 The Chart section in the detailed stock information screen uses a **WebView element** to load the HighCharts stock chart. To load the chart, the App loads a local HTML file with the necessary JavaScript to request the data from the NodeJS server and displays the chart when the data is fetched.
+
+[https://user-images.githubusercontent.com/70775208/182162837-9080533c-ec59-412d-a033-3bd03f4672f8.mp4](#video)
 
