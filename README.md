@@ -1,2 +1,2 @@
 # Stocks-App
-Android app which gives latest prices, charts and news of different stocks. It also simulated buying/selling of stocks with dummy account.
+Android app which allows users to search for different stock symbols/tickers and look at the detailed information about them. Additionally, the users can trade with virtual money and create a portfolio. Users can also favorite stock symbols to track their stock prices. The App contains 2 screens: Home screen and the Detailed Stock Information screen. However, the App has multiple features on each of these screens.
