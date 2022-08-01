@@ -1,7 +1,7 @@
 # Stocks-App
-Android app which allows users to search for different stock symbols/tickers and look at the detailed information about them. Additionally, the users can trade with virtual money and create a portfolio. Users can also favorite stock symbols to track their stock prices. 
+Android app which allows users to search for different stock symbols/tickers and look at the detailed information about them. Additionally, the users can trade with virtual money and create a portfolio. Users can also favorite stock symbols to track their stock prices.
 
-video(#video)
+I have written details of all the functionalities and specifications of the app below. However, if you wish to skip them then go ahead and checkout this screen capture [demo](#demo) of the app.
 
 The App contains 2 screens: Home screen and the Detailed Stock Information screen. However, the App has multiple features on each of these screens.
 
@@ -45,5 +45,7 @@ The Trade button in the **Portfolio section** opens a new dialog box for trading
 ## HighCharts in Android
 The Chart section in the detailed stock information screen uses a **WebView element** to load the HighCharts stock chart. To load the chart, the App loads a local HTML file with the necessary JavaScript to request the data from the NodeJS server and displays the chart when the data is fetched.
 
-[https://user-images.githubusercontent.com/70775208/182162837-9080533c-ec59-412d-a033-3bd03f4672f8.mp4](#video)
+## Demo
+
+https://user-images.githubusercontent.com/70775208/182162837-9080533c-ec59-412d-a033-3bd03f4672f8.mp4
 
