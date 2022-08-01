@@ -1,5 +1,6 @@
 # Stocks-App
 Android app which allows users to search for different stock symbols/tickers and look at the detailed information about them. Additionally, the users can trade with virtual money and create a portfolio. Users can also favorite stock symbols to track their stock prices. The App contains 2 screens: Home screen and the Detailed Stock Information screen. However, the App has multiple features on each of these screens.
+
 There are 4 calls to the **tiingo** APIs for *company description, stock prices, autocomplete* and *chart data points*, and the additional *newsapi* endpoint.
 Backend is based on NodeJS which handles all the API calls.
 ## Home Screen
