@@ -21,7 +21,8 @@ Additionally the price information for each stock is updated every 15 seconds. T
 ## Detailed Stock Information Screen
 On clicking the **Goto** button on any stock listing or searching for a stock symbol, the loading spinner symbol is displayed while the details are being fetched. Once the data has been fetched except the chart (since the chart takes longer to load), the spinner disappears and information regarding the stock is available to the user.
 
-The top action bar should has the ‘Stock’ title and the back button to go back to the home screen (which has the filter values that were used for the current search if triggered by using the search functionality). The action bar also contains a favorite icon to add or remove the stock from favorites. The favorite icon will either be filled or bordered based on whether the stock is favorited or not. Adding/Removing the stock from favorites also displays a toast message as shown in the [video].
+The top action bar should has the ‘Stock’ title and the back button to go back to the home screen (which has the filter values that were used for the current search if triggered by using the search functionality). The action bar also contains a favorite icon to add or remove the stock from favorites. The favorite icon will either be filled or bordered based on whether the stock is favorited or not. Adding/Removing the stock from favorites also displays a toast message as shown in the #video.
+
 Below the action bar, there should be 4 fields: stocks symbol, current price with ‘$’ sign, company name and the change price with ‘$’ sign (the text color should be green, red or grey based on the change price value being positive, negative or zero respectively). The App then has a WebView element which is blank till the chart loads. (More details later in this section)
 
-[video]https://user-images.githubusercontent.com/70775208/182134838-d3ed17c2-e953-4c21-8a9b-1a55e3910b69.mp4
+#video https://user-images.githubusercontent.com/70775208/182134838-d3ed17c2-e953-4c21-8a9b-1a55e3910b69.mp4
