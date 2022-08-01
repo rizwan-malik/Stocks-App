@@ -25,4 +25,4 @@ The top action bar should has the ‘Stock’ title and the back button to go ba
 
 Below the action bar, there should be 4 fields: stocks symbol, current price with ‘$’ sign, company name and the change price with ‘$’ sign (the text color should be green, red or grey based on the change price value being positive, negative or zero respectively). The App then has a WebView element which is blank till the chart loads. (More details later in this section)
 
-#video https://user-images.githubusercontent.com/70775208/182134838-d3ed17c2-e953-4c21-8a9b-1a55e3910b69.mp4
+[https://user-images.githubusercontent.com/70775208/182134838-d3ed17c2-e953-4c21-8a9b-1a55e3910b69.mp4](#video)
